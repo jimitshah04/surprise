@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lora', serif; 
     background-color: rgb(28, 28, 48);
 }
 
@@ -79,6 +79,7 @@ body {
 .card-title {
     font-size: 1.5rem;
     margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
 }
 
 .card-body {
