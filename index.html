@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpise</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+</head>
+
+<body>
+    <div id="starfield">
+        <canvas id="shootingStarsCanvas"></canvas>
+    </div>
+    <nav class="nav">
+        <a href="#top" class="logo">H&J</a>
+    </nav>
+    <audio id="love-audio" src="assets/music/Tum Se Hi (Instrumental) - Jab We Met 320 Kbps.mp3" preload="auto"></audio>
+
+
+    <div class="main-container">
+
+        <!-- HERO -->
+        <div id="hero" class="card">
+            <img id="hero-img" class="image" src="assets/images/IMG-20250221-WA0029.jpg" alt="hero image">
+            <button id="hero-btn" class="action-btn">Get started</button>
+        </div>
+
+        <!-- MUSIC -->
+        <div id="music" class="card">
+            <div id="music-title" class="card-title">Do our vibes match?</div>
+            <div id="music-carousel" class="carousel">
+                <!-- Card 1 -->
+                <div class="carousel-slide active" data-answer="parwaah nahi">
+                    <div class="music-ques">Complete the lyric</div>
+                    <div class="music-lyrics">Miloon ka ho saalon ka ho Chahhe wo <br> Safar ki ** <br>Tu hai jaha main bhi waha hona hai<br>
+                        Pahuch hai jaana wahi</div>
+                    <input type="text" class="music-input" placeholder="Type here" />
+                </div>
+                <!-- Card 2 -->
+                <div class="carousel-slide" data-answer="together">
+                    <div class="music-ques">Guess the song</div>
+                    <div class="music-lyrics">Baby, would you walk to me in the pouring rain? <br>
+                        And drive to me when I'm miles away? <br>
+                        And fly to me just to feel okay? <br>
+                        We'll figure it out, figure it out together</div>
+                    <input type="text" class="music-input" placeholder="Type here" />
+                </div>
+                <!-- Card 3 -->
+                <div class="carousel-slide" data-answer="Ha Pitne Ke Layak">
+                    <div class="music-ques">Guess the lyric</div>
+                    <div class="music-lyrics">Ha Picture Mein Rota Hain <br>
+
+                        Ha Khulle Muh Sota Hain <br>
+                        
+                        Ha Jara Nalayak Hain <br>
+                        
+                        ** Hain</div>
+                    <input type="text" class="music-input" placeholder="Type here" />
+                </div>
+                <!-- Card 4 -->
+                <div class="carousel-slide" data-answer="Tum Ho">
+                    <div class="music-ques">Guess the song</div>
+                    <div class="music-lyrics">Kis Tarah Chheenega Aa <br>
+
+                        Mujh Se Ye Jahaan Tumhe <br>
+                        
+                        Tum Bhi Ho Main <br>
+                        
+                        Kya Fiqar Ab Humein <br> </div>
+                    <input type="text" class="music-input" placeholder="Type here" />
+                </div>
+                <!-- Card 5 -->
+                <div class="carousel-slide" data-answer="if I'm gonna be drunk">
+                    <div class="music-ques">Guess the lyric</div>
+                    <div class="music-lyrics">But if I'm all dressed up <br>
+                        They might as well be looking at us <br>
+                        And if they call me a slut <br>
+                        You know it might be worth it for once <br>
+                        And *** <br>
+                        Might as well be drunk in love <br> </div>
+                    <input type="text" class="music-input" placeholder="Type here" />
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button id="music-prev-btn" class="action-btn">Prev</button>
+                <button id="music-check-btn" class="action-btn">Check</button>
+                <button id="music-next-btn" class="action-btn">Next</button>
+            </div>
+        </div>
+
+        <!-- MEMORY LANE -->
+        <div id="memory" class="card">
+            <div id="memory-title" class="card-title">Memory Lane</div>
+            <div id="memory-carousel" class="carousel">
+                <!-- Slide 0 -->
+                <div class="carousel-slide active">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0005.jpg" alt="Memory 1">
+                            </div>
+                            <div class="flip-back">
+                                <p>Remember I brought steam hot parcel for you and you couldn't give correct directions.
+                                    And then we wrote each others' names on the windshield which is still there. I had
+                                    so much fun with you on that day.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 1 -->
+                <div class="carousel-slide">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0006.jpg" alt="Memory 1">
+                            </div>
+                            <div class="flip-back">
+                                <p>
+                                    Such a beautiful Goa day. Looks like you are falling for me. Hehehehe... I remember
+                                    you were so happy that day.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-slide">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0007.jpg" alt="Memory 2">
+                            </div>
+                            <div class="flip-back">
+                                <p>I came to your home for the first time and you were looking so cute. You offered me
+                                    your cupcake and we clicked polaroids. I remember it well.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-slide">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0008.jpg" alt="Memory 3">
+                            </div>
+                            <div class="flip-back">
+                                <p>You came to my home for lunch. We played our and went on the terrace. I know you
+                                    wanted to kiss me. Hahahaha!!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="carousel-slide">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0009.jpg" alt="Memory 3">
+                            </div>
+                            <div class="flip-back">
+                                <p>
+                                    Goa day part 2. Getting cozy by the beach with this cute girl. I started liking you.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="carousel-slide">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0010.jpg" alt="Memory 3">
+                            </div>
+                            <div class="flip-back">
+                                <p>Oppenhiemer day. Your drooled on me which I really loved. I was falling for you. I
+                                    was glad I could comfort you.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 6 -->
+                <div class="carousel-slide">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0011.jpg" alt="Memory 3">
+                            </div>
+                            <div class="flip-back">
+                                <p>Goa day finale. You visited my college and took 3 buses to see me. Hats off! You got
+                                    sleep drunk and made out crazy on the beach. I am now caught in your heart.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 7 -->
+                <div class="carousel-slide">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0012.jpg" alt="Memory 3">
+                            </div>
+                            <div class="flip-back">
+                                <p>Random cute moments with you on Gmeet. Loved our calls where you were pinky pinky.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 8 -->
+                <div class="carousel-slide">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0013.jpg" alt="Memory 3">
+                            </div>
+                            <div class="flip-back">
+                                <p>You cooking for me, never felt happier. Started to love you a little more. My god you
+                                    are such a good chef.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 9 -->
+                <div class="carousel-slide">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0014.jpg" alt="Memory 3">
+                            </div>
+                            <div class="flip-back">
+                                <p>You casually stealing my things. But steal steal they are yours lol. You stole my
+                                    heart.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 10 -->
+                <div class="carousel-slide">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0015.jpg" alt="Memory 3">
+                            </div>
+                            <div class="flip-back">
+                                <p>Us finally going to MG road. You looking so pretty in indian.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 11 -->
+                <div class="carousel-slide">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0016.jpg" alt="Memory 3">
+                            </div>
+                            <div class="flip-back">
+                                <p>Looks like you are high on me lol. I want this day again. LETS PAINT!!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 12 -->
+                <div class="carousel-slide">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0018.jpg" alt="Memory 3">
+                            </div>
+                            <div class="flip-back">
+                                <p>Ooty you don't have a booty. I love when you kiss me. Kiss me rn!!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 13 -->
+                <div class="carousel-slide">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0020.jpg" alt="Memory 3">
+                            </div>
+                            <div class="flip-back">
+                                <p>Us being us. 2 souls who fell for each other. This is a cue for you to bite my neck.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 14 -->
+                <div class="carousel-slide">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0021.jpg" alt="Memory 3">
+                            </div>
+                            <div class="flip-back">
+                                <p>Serious writer vibes. Babe become a writer then life will be sort.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 15 -->
+                <div class="carousel-slide">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0022.jpg" alt="Memory 3">
+                            </div>
+                            <div class="flip-back">
+                                <p>Give me the lotus honey stem its my fav. Although you are my fav too. I wanna eat you
+                                    both.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 16 -->
+                <div class="carousel-slide">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0025.jpg" alt="Memory 3">
+                            </div>
+                            <div class="flip-back">
+                                <p>I wanna eat icecream off of you. Pls. Request.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 17 -->
+                <div class="carousel-slide">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0024.jpg" alt="Memory 3">
+                            </div>
+                            <div class="flip-back">
+                                <p>Meeting after a Jeremy Bearimy. Both are so happy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 18 -->
+                <div class="carousel-slide">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0027.jpg" alt="Memory 3">
+                            </div>
+                            <div class="flip-back">
+                                <p>My hawty shawty. Looking hottiee in red. Wanna eat you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 19 -->
+                <div class="carousel-slide">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <img class="image" src="assets/images/IMG-20250221-WA0030.jpg" alt="Memory 3">
+                            </div>
+                            <div class="flip-back">
+                                <p>If I throw you in the sky will you return to Earth? Its the last pic make it out, eat
+                                    me alive, make out, have sex with me, etc etc.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="carousel-controls">
+                <button id="memory-prev-btn" class="action-btn">Prev</button>
+                <button id="memory-reveal-btn" class="action-btn">Reveal</button>
+                <button id="memory-next-btn" class="action-btn">Next</button>
+            </div>
+        </div>
+
+        <!-- BUCKETLIST -->
+        <div id="bucket" class="card">
+            <div id="bucket-title" class="card-title">Things we wanna do together</div>
+            <div class="bucket-items">
+                <label class="bucket-label">
+                    <input type="checkbox" name="bucket" id="bucket1">
+                    Skydiving
+                </label>
+                <label class="bucket-label">
+                    <input type="checkbox" name="bucket" id="bucket2">
+                    Trip to the beach
+                </label>
+                <label class="bucket-label">
+                    <input type="checkbox" name="bucket" id="bucket3">
+                    Getting fitter with each other
+                </label>
+                <label class="bucket-label">
+                    <input type="checkbox" name="bucket" id="bucket4">
+                    Eating outside food
+                </label>
+                <label class="bucket-label">
+                    <input type="checkbox" name="bucket" id="bucket5">
+                    Being productive at work & college
+                </label>
+                <label class="bucket-label">
+                    <input type="checkbox" name="bucket" id="bucket6">
+                    Sunset to sunrise in each others' arms
+                </label>
+                <label class="bucket-label">
+                    <input type="checkbox" name="bucket" id="bucket7">
+                    Vipasna in the mountains
+                </label>
+                <label class="bucket-label">
+                    <input type="checkbox" name="bucket" id="bucket8">
+                    Watching shows everyday
+                </label>
+                <label class="bucket-label">
+                    <input type="checkbox" name="bucket" id="bucket9">
+                    Reading books together
+                </label>
+                <label class="bucket-label">
+                    <input type="checkbox" name="bucket" id="bucket10">
+                    Learning to drive
+                </label>
+                <label class="bucket-label">
+                    <input type="checkbox" name="bucket" id="bucket11">
+                    Learn to cook
+                </label>
+                <label class="bucket-label">
+                    <input type="checkbox" name="bucket" id="bucket12">
+                    Focus on our parents' health
+                </label>
+            </div>
+            <button id="bucket-save-btn" class="action-btn">Save</button>
+        </div>
+
+        <!-- QUIZ -->
+        <div id="quiz" class="card">
+            <div id="quiz-title" class="card-title">Do you know me well</div>
+            <div id="quiz-carousel" class="carousel">
+                <!-- Slide 1 -->
+                <div class="carousel-slide active" data-answer="option1">
+                    <div id="quiz-question" class="card-body">What is my go to meal?</div>
+                    <div class="quiz-options">
+                        <button id="quiz-option" class="action-btn">PaniPuri</button>
+                        <button id="quiz-option" class="action-btn">Nachos</button>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-slide" data-answer="option2">
+                    <div id="quiz-question" class="card-body">What would I rather do?</div>
+                    <div class="quiz-options">
+                        <button id="quiz-option" class="action-btn">Sleep</button>
+                        <button id="quiz-option" class="action-btn">Party</button>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-slide" data-answer="option1">
+                    <div id="quiz-question" class="card-body">What do I like more?</div>
+                    <div class="quiz-options">
+                        <button id="quiz-option" class="action-btn">Beach</button>
+                        <button id="quiz-option" class="action-btn">Mountains</button>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="carousel-slide" data-answer="option2">
+                    <div id="quiz-question" class="card-body">Do I love you?</div>
+                    <div class="quiz-options">
+                        <button id="quiz-option" class="action-btn">Yes</button>
+                        <button id="quiz-option" class="action-btn">Obviously yes</button>
+                    </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="carousel-slide" data-answer="option2">
+                    <div id="quiz-question" class="card-body">When am I horny for you?</div>
+                    <div class="quiz-options">
+                        <button id="quiz-option" class="action-btn">Most of the times</button>
+                        <button id="quiz-option" class="action-btn">Always</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button id="quiz-prev-btn" class="action-btn">Prev</button>
+                <button id="quiz-next-btn" class="action-btn">Next</button>
+            </div>
+        </div>
+
+        <!-- LOVE -->
+        <div id="love" class="card">
+            <div id="love-title" class="card-title">Do you love me?</div>
+            <button id="love-yes-btn" class="action-btn">YES!</button>
+            <button id="love-no-btn" class="action-btn">No</button>
+        </div>
+
+        <!-- LETTER -->
+        <div id="letter" class="card">
+            <div id="letter-title" class="card-title">A digital letter for you</div>
+            <div id="letter-para" class="card-body">You are the best thing that ever happened to me. I can't wait to see you face again. 
+              <br>  Whenever there is distance between us it gives me more time to understand how much i really want you. You are my angel and my honeypie. 
+           <br> I miss your breath on me. I want to be healthy and wealthy with you. <br> We gon' make it through!</div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-text">Made with ❤️ by H&J</div>
+    </footer>
+
+    <script>
+        window.addEventListener('load', () => {
+            const container = document.getElementById('starfield');
+            const canvas = document.getElementById('shootingStarsCanvas');
+            const ctx = canvas.getContext('2d');
+
+            let w, h;
+
+            // Resize canvas to fill container
+            function resizeCanvas() {
+                w = container.clientWidth;
+                h = container.clientHeight;
+                canvas.width = w;
+                canvas.height = h;
+            }
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+
+            // Shooting star parameters (increased speeds)
+            const shootingStars = [];
+            const maxShootingStars = 5;
+            const spawnInterval = 1000;
+            const starSpeedMin = 8;   // Increased minimum speed
+            const starSpeedMax = 16;  // Increased maximum speed
+            const starLength = 8;     // Trail length
+            const starColor = '#ff69b4'; // Pink color
+
+            // Utility: random number in [min, max)
+            function randRange(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            // Draw a star shape at (cx, cy)
+            function drawStar(ctx, cx, cy, spikes, outerRadius, innerRadius, color) {
+                let rot = Math.PI / 2 * 3;
+                let x = cx;
+                let y = cy;
+                let step = Math.PI / spikes;
+                ctx.beginPath();
+                ctx.moveTo(cx, cy - outerRadius);
+                for (let i = 0; i < spikes; i++) {
+                    x = cx + Math.cos(rot) * outerRadius;
+                    y = cy + Math.sin(rot) * outerRadius;
+                    ctx.lineTo(x, y);
+                    rot += step;
+                    x = cx + Math.cos(rot) * innerRadius;
+                    y = cy + Math.sin(rot) * innerRadius;
+                    ctx.lineTo(x, y);
+                    rot += step;
+                }
+                ctx.lineTo(cx, cy - outerRadius);
+                ctx.closePath();
+                ctx.fillStyle = color;
+                ctx.fill();
+            }
+
+            // Create a new shooting star
+            function createShootingStar() {
+                // Decide whether to spawn from the top or from the left.
+                const spawnEdge = Math.random() < 0.5 ? 'top' : 'left';
+                let startX, startY, vx, vy;
+                // Define our speed range
+                const s = randRange(starSpeedMin, starSpeedMax); // e.g., between 8 and 16
+
+                if (spawnEdge === 'top') {
+                    // Spawn from somewhere along the top edge
+                    startX = Math.random() * w;
+                    startY = -20; // just above the screen
+
+                    // Randomize the angle around 45° ±15° (in degrees)
+                    let offset = randRange(-15, 15); // random offset between -15 and 15 degrees
+                    let angleDeg = 45 + offset;
+                    let angleRad = angleDeg * (Math.PI / 180);
+                    // Randomly decide if the star goes left or right horizontally:
+                    let sign = Math.random() < 0.5 ? 1 : -1;
+                    vx = s * Math.cos(angleRad) * sign;
+                    vy = s * Math.sin(angleRad); // always positive so it moves downward
+                } else {
+                    // Spawn from the left edge (only from the top half)
+                    startX = -20;
+                    startY = Math.random() * (h / 2);
+
+                    // For left spawn, force the horizontal component to be positive (to move right)
+                    let offset = randRange(-15, 15);
+                    let angleDeg = 45 + offset; // angle between 30 and 60 degrees
+                    let angleRad = angleDeg * (Math.PI / 180);
+                    vx = s * Math.cos(angleRad); // positive horizontal movement
+                    vy = s * Math.sin(angleRad); // downward movement
+                }
+
+                return {
+                    x: startX,
+                    y: startY,
+                    vx: vx,
+                    vy: vy,
+                    trail: [],
+                };
+            }
+
+
+            // Spawn a star if we have capacity
+            function trySpawnStar() {
+                if (shootingStars.length < maxShootingStars) {
+                    shootingStars.push(createShootingStar());
+                }
+            }
+
+            // Animate and update stars
+            function animate() {
+                ctx.clearRect(0, 0, w, h);
+
+                for (let i = 0; i < shootingStars.length; i++) {
+                    const star = shootingStars[i];
+
+                    // Update star position
+                    star.x += star.vx;
+                    star.y += star.vy;
+
+                    // Record current position for trail
+                    star.trail.push({ x: star.x, y: star.y });
+                    if (star.trail.length > starLength) {
+                        star.trail.shift();
+                    }
+
+                    // Draw trail: a line connecting the trail positions
+                    ctx.beginPath();
+                    ctx.strokeStyle = starColor;
+                    ctx.lineWidth = 2;
+                    ctx.moveTo(star.trail[0].x, star.trail[0].y);
+                    for (let t = 1; t < star.trail.length; t++) {
+                        ctx.lineTo(star.trail[t].x, star.trail[t].y);
+                    }
+                    ctx.stroke();
+
+                    // Draw a star at the tip of the trail (current position)
+                    drawStar(ctx, star.x, star.y, 5, 6, 3, starColor);
+
+                    // Remove star if it moves out of bounds
+                    if (star.x < -50 || star.x > w + 50 || star.y < -50 || star.y > h + 50) {
+                        shootingStars.splice(i, 1);
+                        i--;
+                    }
+                }
+
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+            setInterval(trySpawnStar, spawnInterval);
+        });
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
